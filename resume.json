@@ -1,0 +1,398 @@
+{
+  "basics": {
+    "name": "Andrew Anggada",
+    "label": "Mobile Dev at Meratus Group | Mobile Dev Enthusiast | Never-ending Learning Journey",
+    "image": "",
+    "email": "andrewanggada@gmail.com",
+    "phone": "089669961997",
+    "url": "https://angdrew.github.io/",
+    "summary": "I'm enthusiastic about mobile app development and I'm a pretty fast learner.\n\nI usually use Flutter to create a mobile app. I love challenges and learn something new. I always hope that I can befriend a lot of people and grow together.\n\nI have created a few projects using Flutter for both Android and iOS.\nI was lucky to work on a few pretty cool projects. The government uses one of them (satpol pp) to record offenders of the covid-19's protocol. The other one is when I was an apprentice at the YCP Solidiance Digital team in Indonesia's branch, I'm participated with my senior to work on one project together. There's so much fun also very challenging!\n\nAnd I also enthusiastic about the mechanical keyboard, and audiophile music. I have a dream to adopt a cat or dog some day.",
+    "location": {
+      "countryCode": "ID",
+      "address": "Jalan Tambak Adi 28 / 28A, Surabaya, East Java"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "angdrew",
+        "url": "https://www.linkedin.com/in/angdrew/"
+      },
+      {
+        "network": "Github",
+        "username": "angdrew",
+        "url": "https://github.com/AngDrew/"
+      },
+      {
+        "network": "Gitlab",
+        "username": "angdrew",
+        "url": "https://gitlab.com/AngDrew/"
+      },
+      {
+        "network": "StackOverflow",
+        "username": "angdrew",
+        "url": "https://stackoverflow.com/users/12716366/angdrew/"
+      },
+      {
+        "network": "Instagram",
+        "username": "ang_drew",
+        "url": "https://instagram.com/ang_drew"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Meratus Group",
+      "position": "Mobile Application Developer",
+      "startDate": "2021-10-31",
+      "endDate": "",
+      "highlights": [],
+      "summary": "Working as a Full-Timer Mobile Developer",
+      "url": "https://www.linkedin.com/company/1190648",
+      "location": "Surabaya, East Java, Indonesia"
+    },
+    {
+      "name": "PT Digital Entropy Venture",
+      "position": "Mobile Application Developer",
+      "startDate": "2021-04-30",
+      "endDate": "2021-10-31",
+      "highlights": [],
+      "summary": "Working as Part-Timer Mobile App Developer",
+      "url": "https://www.linkedin.com/company/72312705",
+      "location": "Surabaya, East Java, Indonesia"
+    },
+    {
+      "name": "YCP Solidiance",
+      "position": "Mobile Application Developer",
+      "startDate": "2020-08-31",
+      "endDate": "2020-12-31",
+      "highlights": [],
+      "summary": "Working as apprentice Mobile Software Engineer",
+      "url": "https://www.linkedin.com/company/447217",
+      "location": "Surabaya, East Java, Indonesia"
+    },
+    {
+      "name": "Lanius Innovation Labs.",
+      "position": "Mobile Application Developer",
+      "startDate": "2020-06-30",
+      "endDate": "2020-07-31",
+      "highlights": [],
+      "summary": "Working as internship as Mobile Developer using Flutter",
+      "url": "https://www.linkedin.com/company/13221831",
+      "location": "Kota Surabaya, East Java, Indonesia"
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Self Initiative",
+      "position": "Speaker",
+      "startDate": "2020-07-31",
+      "endDate": "2020-07-31",
+      "summary": "my small free course for my circle, talking about fundamentals, basics, tips and tricks, knowledge base of Flutter development\nbut the course is cancelled due to small participants and busy timeline",
+      "highlights": [],
+      "url": ""
+    },
+    {
+      "organization": "Developer Student Clubs (DSC - DTU)",
+      "position": "Speaker",
+      "startDate": "2019-09-30",
+      "endDate": "2019-10-31",
+      "summary": "Speaking about Flutter and doing small live code for a few times",
+      "highlights": [],
+      "url": "https://www.linkedin.com/company/14592036"
+    }
+  ],
+  "education": [
+    {
+      "institution": "Politeknik Elektronik Negeri Surabaya",
+      "url": "https://www.pens.ac.id/tentang-pens/",
+      "area": "Information Technology",
+      "studyType": "Associate's Degree",
+      "startDate": "2018-01-31",
+      "endDate": "2021-08-31",
+      "score": "3.63",
+      "courses": []
+    }
+  ],
+  "awards": [
+    {
+      "title": "Finalist PIC 2020",
+      "date": "2020-06-01",
+      "awarder": "Politeknik Elektronika Negeri Surabaya",
+      "summary": ""
+    },
+    {
+      "title": "1st Appreciation Award at EEPIS Software Expo 2020",
+      "date": "2020-01-01",
+      "awarder": "Politeknik Elektronika Negeri Surabaya",
+      "summary": "making mobile app: Vendora - event market"
+    },
+    {
+      "title": "Finalist of KMIPN 2018 (Business Informatics)",
+      "date": "2018-11-01",
+      "awarder": "Ristekdikti",
+      "summary": "making a business plan with IT themed"
+    }
+  ],
+  "publications": [],
+  "skills": [
+    {
+      "name": "Flutter",
+      "level": "advanced",
+      "keywords": [
+        "Dart",
+        "Android",
+        "iOS",
+        "Multi-Platform"
+      ]
+    },
+    {
+      "name": "Git",
+      "level": "intermediate",
+      "keywords": [
+        "Git-CLI",
+        "GitKraken"
+      ]
+    },
+    {
+      "name": "Object-Oriented Programming (OOP)",
+      "level": "intermediate",
+      "keywords": [
+        "Dart"
+      ]
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Belajar Prinsip Pemrograman SOLID",
+      "issuer": "Dicoding Indonesia",
+      "endDate": "2024-01-31",
+      "startDate": "2021-01-31",
+      "url": "https://www.dicoding.com/certificates/53XEEOLG9XRN"
+    }
+  ],
+  "languages": [
+    {
+      "language": "Indonesia",
+      "fluency": "Native Speaker"
+    },
+    {
+      "language": "English",
+      "fluency": "Average"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Game"
+    },
+    {
+      "name": "Music"
+    },
+    {
+      "name": "Psychology"
+    },
+    {
+      "name": "Philosophy"
+    },
+    {
+      "name": "Crypto Currency"
+    },
+    {
+      "name": "Technology"
+    },
+    {
+      "name": "Open Source"
+    }
+  ],
+  "references": [],
+  "projects": [
+    {
+      "name": "MIF App",
+      "startDate": "2021-10-15",
+      "description": "This app is used for tracking container, making booking, checking schedule, download documetns, create contract. it's all about logistic and to fulfill the Meratus business need.\nMy role in this project is as a solo full-timer mobile developer, remaking the old project with the brand new code for better performance and experience.\n\nBuilt using Flutter, using MVVM architecture, Provider state management, Clean code principles, CI CD with GitHub actions, and flavor.",
+      "url": null,
+      "endDate": "",
+      "highlights": [
+        "Flutter",
+        "Multi Platform",
+        "Provider",
+        "MVVM Architecture",
+        "Github Action",
+        "DevOps",
+        "Flavor"
+      ],
+      "roles": [
+        "Mobile Developer"
+      ],
+      "entity": "Meratus Group",
+      "type": "application"
+    },
+    {
+      "name": "Legal Space ID",
+      "startDate": "2021-07-31",
+      "description": "This app is used for making appointments with the professionals in in the field of law. There are 2 user roles, Partner and Customer. Partner can moderate their consultation with the app, while Customer can make an appointment to the partners.\nMy role in this project is as a solo part-timer mobile developer.\n\nBuilt using Flutter, using MVVM architecture, Provider state management, Midtrans payment gateway, Clean code principles, CI CD with GitHub actions, and flavor.",
+      "url": null,
+      "endDate": "",
+      "highlights": [
+        "Flutter",
+        "Multi Platform",
+        "Provider",
+        "MVVM Architecture",
+        "Github Action",
+        "DevOps",
+        "Flavor",
+        "Midtrans",
+        "Payment Gateway"
+      ],
+      "roles": [
+        "Senior Mobile Developer"
+      ],
+      "entity": "Digital Entropy Venture",
+      "type": "application"
+    },
+    {
+      "name": "MIF",
+      "startDate": "2021-10-31",
+      "description": "This app is used for tracking and making request about logistic online at Meratus.\n\nMy role in this project is as a full-timer mobile app developer, my job is to maintain the existing app while building the remake version of the app. Why remake? that's a lot to explain. But tl;dr I've spotted so many issue about the project, so I asked the chairman if i can remake this with a better fundamental from architecture, library, low-level things. And they're agreed, so I made the remake while maintaining the old one.\n\nBuilt using Flutter, using rxdart and bloc, local notification.",
+      "url": null,
+      "endDate": "2021-10-31",
+      "highlights": [
+        "Flutter",
+        "Multi Platform",
+        "Provider",
+        "MVVM Architecture",
+        "Github Action",
+        "DevOps",
+        "Flavor",
+        "Midtrans",
+        "Payment Gateway"
+      ],
+      "roles": [
+        "Senior Mobile Developer"
+      ],
+      "entity": "Digital Entropy Venture",
+      "type": "application"
+    },
+    {
+      "name": "TiaraMas",
+      "startDate": "2021-04-30",
+      "description": "This app is used to book an online tickets of TiaraMas.\nMy role in this project is as a solo part-timer mobile developer.\n\nbuilt with Flutter, using clean code principles, MVVM architecture, Provider state management, CI CD with GitHub actions.",
+      "url": null,
+      "endDate": "2021-10-31",
+      "highlights": [
+        "Flutter",
+        "Multi Platform",
+        "Provider",
+        "MVVM Architecture",
+        "Github Action",
+        "DevOps"
+      ],
+      "roles": [
+        "Mobile Developer"
+      ],
+      "entity": "Digital Entropy Venture",
+      "type": "application"
+    },
+    {
+      "name": "JMW Fisher App",
+      "startDate": "2020-08-31",
+      "description": "an cross platform mobile application for fisher - as apprenticeship at YCP Solidiance\ncreated with Flutter\n\nthe app is used for fisher to see fishing spot, available facilities, useful maps.\n\nThe features are:\n- log catch\n- showing all available facilities\n- showing fishing spots\n- maps\n- timer\n- weather\n- fish information\n- available species on certain spot\n- etc.\n\nthe app is integrated with Java backend",
+      "url": null,
+      "endDate": "2020-12-31",
+      "highlights": [
+        "Flutter",
+        "Multi Platform",
+        "BLOC",
+        "Bloc Pattern",
+        "Nautical Map API",
+        "Weather API",
+        "Google Map API",
+        "Webview",
+        "Platform Channel"
+      ],
+      "roles": [
+        "Mobile Developer Intern"
+      ],
+      "entity": "YCP Solidiance",
+      "type": "application"
+    },
+    {
+      "name": "Sistem Informasi Ketidakpatuhan Masyarakat (SIKM)",
+      "startDate": "2020-09-30",
+      "description": "I was lucky to have this opportunity to make an app for a guy from Kominfo.\n\na cross-platform mobile application for SatpolPP - as Freelancer Mobile Engineering\ncreated with Flutter\n\nthe app is used for Satpol PP to record people who break the covid protocols.\n\nThe features are:\n- record people\n- officer attendance\n- statistics of the distribution cases\n- profile\n\nthe app is integrated with Laravel Backend\n\neven this project looks simple and considered a small project tho, but there is a lot of tasks to do on it. I treat it like my best trophy and I want other people to love to use it. I used all my skills to work on that project and it was so satisfying!\n(I nominated this project with \"My Most Satisfying Project on 2020\")\nbut it takes a lot of time waiting for a client to respond, I'm struggling\n\na few things that I'm interested in that project:\n- Code Generation\n- Software Testing\n- Animation\n- Responsive\n- 90% looks like the prototype\n- Performance First\n- Clean Code (I'm still in practice but it's very readable!)\n- Error Handling\n- it just EVERYTHING! 😍\n\nthings that I haven't added:\n- Crashlytics (the project is finished already before i could request for their Firebase account)",
+      "url": null,
+      "endDate": "2020-12-31",
+      "highlights": [
+        "Flutter",
+        "Multi Platform",
+        "Provider"
+      ],
+      "roles": [
+        "Freelance Mobile Developer"
+      ],
+      "type": "application"
+    },
+    {
+      "name": "Enterprise University Mobile",
+      "startDate": "2020-06-30",
+      "description": "E-Learning platform - as internship at Lannius Innovation Labs\ncreated with Flutter\n\nthe app used for learning platform which has a lot of features, it's privately made for some university.\n\nThe features are:\n- take course\n- add reminder\n- forum group discussion\n- video streaming\n- notes\n- quiz\n- profile\n- has 3 type UI (Mentee, Manager, Mentor)\n- etc. (imagine something like quipper or ruang guru they're pretty similar)\n\nthe app isn't integrated yet because the time is too short",
+      "url": null,
+      "endDate": "2020-07-31",
+      "highlights": [
+        "Flutter",
+        "Multi Platform"
+      ],
+      "roles": [
+        "Mobile Developer Intern"
+      ],
+      "entity": "Lannius Innovation Labs",
+      "type": "application"
+    },
+    {
+      "name": "Lapis Surabaya",
+      "startDate": "2020-04-30",
+      "description": "E-commerce - as maintainer and developer to fix the previous bug and adding new features.\ncreated with Flutter\n\nthis app is created specially for those customers who will buy in massive amount with high minimum transaction. They should be verified before be able to purchase something, and the app it self simply just record the order of the customers and tell the web admin to response the order and finish\n\nThe features are: \n- dashboard (showing user point, available promotion code, user role)\n- product screen (user can place an order and see the product list)\n- order screen (user can enter the detailed information for the order)\n- order list (where user can find the ordered items and see the order status)\n- profile (information about the user)\n- edit profile (where user can change their information)\n- verification screen (user can request for higher role)\n\nintegrated with backend (using laravel)",
+      "url": null,
+      "endDate": "2020-04-30",
+      "highlights": [
+        "Flutter",
+        "Multi Platform"
+      ],
+      "roles": [
+        "Freelance Mobile Developer"
+      ],
+      "type": "application"
+    },
+    {
+      "name": "Tanam Kota",
+      "startDate": "2020-03-31",
+      "description": "Application - as developer, create from scratch\ncreated with Flutter\n\nApp for start-up, using IoT to monitoring the plants on the created hydroponic towers and also controls it. The tower it self is made by the start-up side, and the app is to assist the tower and it's functionality.\n\nthe features are:\n- monitoring hydroponic status (humidity, water volume, growth, acid level)\n- control sensors (water pump switch, growth light switch)\n- supply customer\n- request supply\n- buy the hydroponic tower\n- has 2 type of UI (customer, farmer)\n\nunfinished\nintegrated with firebase",
+      "url": null,
+      "endDate": "2020-03-31",
+      "highlights": [
+        "Flutter",
+        "Multi Platform"
+      ],
+      "roles": [
+        "IT Team Member"
+      ],
+      "entity": "Tanam Kota Team",
+      "type": "application"
+    },
+    {
+      "name": "E-Vote",
+      "startDate": "2020-02-28",
+      "description": "as developer also a chairman, remake project from scratch from the Native version to Flutter\ncreated with Flutter\n\nthe app is used to succession of new chairman on the organization, using token that uniquely generated from the web app and use them in the mobile app to vote the candidates\n\nthe features are:\n- login\n- view candidates\n- choose candidates\n- timeout when token expires\n\nintegrated with backend (using laravel)",
+      "url": null,
+      "endDate": "2020-02-28",
+      "highlights": [
+        "Flutter",
+        "Multi Platform"
+      ],
+      "roles": [
+        "E-Code Chairman"
+      ],
+      "entity": "Himpunan Mahasiswa IT PENS",
+      "type": "application"
+    }
+  ]
+}
