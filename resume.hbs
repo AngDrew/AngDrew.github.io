@@ -1,17 +1,25 @@
 <!doctype html>
 <html>
-  <head>
+
+<head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
   <title>{{#resume.basics}}{{name}}{{/resume.basics}}</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
   <style>
-  {{{css}}}
+    {
+        {
+          {
+          css
+        }
+      }
+    }
   </style>
-  
-  </head>
-  <body>
-  
+
+</head>
+
+<body>
+
   <div id="resume">
     {{> basics }}
     {{> skills }}
@@ -25,5 +33,6 @@
     {{> interests }}
     {{> references }}
 
-  </body>
+</body>
+
 </html>

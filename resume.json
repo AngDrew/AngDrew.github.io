@@ -206,6 +206,27 @@
   "references": [],
   "projects": [
     {
+      "name": "MIF",
+      "startDate": "2021-10-31",
+      "description": "This app is used for tracking and making request about logistic online at Meratus.\n\nMy role in this project is as a full-timer mobile app developer, my job is to maintain the existing app while building the remake version of the app. Why remake? that's a lot to explain. But tl;dr I've spotted so many issue about the project, so I asked the chairman if i can remake this with a better fundamental from architecture, library, low-level things. And they're agreed, so I made the remake while maintaining the old one.\n\nBuilt using Flutter, using rxdart and bloc, local notification.",
+      "url": null,
+      "endDate": "",
+      "highlights": [
+        "Flutter",
+        "Multi Platform",
+        "Provider",
+        "MVVM Architecture",
+        "Github Action",
+        "DevOps",
+        "Flavor"
+      ],
+      "roles": [
+        "Senior Mobile Developer"
+      ],
+      "entity": "Digital Entropy Venture",
+      "type": "application"
+    },
+    {
       "name": "Legal Space ID",
       "startDate": "2021-07-31",
       "description": "This app is used for making appointments with the professionals in in the field of law. There are 2 user roles, Partner and Customer. Partner can moderate their consultation with the app, while Customer can make an appointment to the partners.\nMy role in this project is as a solo part-timer mobile developer.\n\nBuilt using Flutter, using MVVM architecture, Provider state management, Midtrans payment gateway, Clean code principles, CI CD with GitHub actions, and flavor.",
@@ -224,29 +245,6 @@
         "Mobile Developer"
       ],
       "entity": "Meratus Group",
-      "type": "application"
-    },
-    {
-      "name": "MIF",
-      "startDate": "2021-10-31",
-      "description": "This app is used for tracking and making request about logistic online at Meratus.\n\nMy role in this project is as a full-timer mobile app developer, my job is to maintain the existing app while building the remake version of the app. Why remake? that's a lot to explain. But tl;dr I've spotted so many issue about the project, so I asked the chairman if i can remake this with a better fundamental from architecture, library, low-level things. And they're agreed, so I made the remake while maintaining the old one.\n\nBuilt using Flutter, using rxdart and bloc, local notification.",
-      "url": null,
-      "endDate": "",
-      "highlights": [
-        "Flutter",
-        "Multi Platform",
-        "Provider",
-        "MVVM Architecture",
-        "Github Action",
-        "DevOps",
-        "Flavor",
-        "Midtrans",
-        "Payment Gateway"
-      ],
-      "roles": [
-        "Senior Mobile Developer"
-      ],
-      "entity": "Digital Entropy Venture",
       "type": "application"
     },
     {
