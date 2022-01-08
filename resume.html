@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+      <title>Andrew Anggada</title>
+      <meta name="description" content="I&#x27;m love mobile app development and I&#x27;m a fast learner.
+      I&#x27;m using Flutter oftenly to create beautiful and performant mobile app. I love challenges and to learn something new. I always hope to meet a lot of people and learn together.
+      I have created many projects using Flutter for both Android and iOS.
+      I also enthusiastic about the mechanical keyboard, and audiophile. I have a dream to adopt a cat or dog some day.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap">
+    <style>:root {
+  color-scheme: light dark;
+
+  --color-background: #ffffff; /* White */
+  --color-muted: #f3f4f5; /* Light Gray 200 */
+  --color-primary: #191e23; /* Dark Gray 900 */
+  --color-secondary: #6c7781; /* Dark Gray 300 */
+  --color-accent: #ffb900; /* Accent Yellow */
+  --color-link: #46b450; /* Accent Green */
+
+  --scale-ratio: 1.25;
+  --scale0: 1rem;
+  --scale1: calc(var(--scale0) * var(--scale-ratio));
+  --scale2: calc(var(--scale1) * var(--scale-ratio));
+  --scale3: calc(var(--scale2) * var(--scale-ratio));
+  --scale4: calc(var(--scale3) * var(--scale-ratio));
+  --scale5: calc(var(--scale4) * var(--scale-ratio));
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #191e23; /* Dark Gray 900 */
+    --color-muted: #23282d; /* Dark Gray 800 */
+    --color-primary: #fbfbfc; /* Light Gray 100 */
+    --color-secondary: #ccd0d4; /* Light Gray 700 */
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-primary);
+  display: grid;
+  font: 1em/1.5 Lato, sans-serif;
+  gap: 2em;
+  grid-template-columns:
+    [full-start]
+    1fr
+    [main-start side-start]
+    minmax(min-content, 12em)
+    [side-end content-start]
+    minmax(min-content, 36em)
+    [main-end content-end]
+    1fr
+    [full-end];
+  grid-template-rows: auto [content] 0;
+  margin-bottom: 4em;
+}
+
+body::before {
+  content: '';
+  grid-column: full;
+  grid-row: content;
+}
+
+ol,
+ul {
+  padding-left: 1em;
+}
+
+li + li {
+  margin-top: 0.4em;
+}
+
+li::marker,
+.network {
+  color: var(--color-secondary);
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:focus,
+a:hover {
+  color: var(--color-accent);
+}
+
+h1,
+h2,
+h3,
+h5 {
+  font-weight: normal;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: var(--scale5);
+}
+
+h2 {
+  color: var(--color-secondary);
+  font-size: var(--scale4);
+}
+
+h3 {
+  color: var(--color-accent);
+  font-size: var(--scale3);
+  grid-column: side;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: var(--scale2);
+}
+
+h5 {
+  font-size: var(--scale1);
+}
+
+h6 {
+  font-size: var(--scale0);
+}
+
+blockquote {
+  border-left: 0.2em solid var(--color-muted);
+  padding-left: 1em;
+}
+
+cite {
+  color: var(--color-secondary);
+  font-style: inherit;
+}
+
+cite::before {
+  content: '— ';
+}
+
+svg {
+  margin-right: 0.2em;
+  vertical-align: -0.2em;
+}
+
+.masthead {
+  background: var(--color-muted);
+  display: inherit;
+  gap: inherit;
+  grid-column: full;
+  grid-template-columns: inherit;
+  padding: 4em 0;
+  text-align: center;
+}
+
+.masthead > *,
+section {
+  grid-column: main;
+}
+
+.masthead > img {
+  border-radius: 50%;
+  margin: 0 auto;
+  max-width: 12em;
+}
+
+article > * + *,
+blockquote > * + * {
+  margin-top: 0.6em;
+}
+
+.meta {
+  color: var(--color-secondary);
+}
+
+.stack {
+  display: grid;
+  gap: 1.5em;
+}
+
+.icon-list {
+  list-style: none;
+  padding: 0;
+}
+
+.grid-list {
+  display: grid;
+  gap: 1em;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+
+.tag-list > li {
+  background: var(--color-muted);
+  margin: 0 0.2em 0.2em 0;
+  padding: 0.2em 0.6em;
+}
+
+.bullet-item:not(:first-child)::before {
+  content: '· ';
+  margin: 0 0.2em;
+}
+
+@media print, (min-width: 48em) {
+  h3 {
+    text-align: right;
+    margin-bottom: inherit;
+  }
+
+  .masthead {
+    text-align: inherit;
+  }
+
+  .masthead > *,
+  section {
+    grid-column: content;
+  }
+
+  .masthead img {
+    grid-column: side;
+    grid-row: span 2;
+    max-width: 100%;
+  }
+
+  section {
+    display: contents;
+  }
+
+  .grid-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+</style>
+  </head>
+  <body>
+      <header class="masthead">
+          <img src="" alt="">
+        <div>
+            <h1>Andrew Anggada</h1>
+            <h2>Mobile Dev at Meratus Group | Mobile Dev Enthusiast | Never-ending Learning Journey</h2>
+        </div>
+          <article>
+            <p>I'm love mobile app development and I'm a fast learner.</p>
+      <p>I'm using Flutter oftenly to create beautiful and performant mobile app. I love challenges and to learn something new. I always hope to meet a lot of people and learn together.</p>
+      <p>I have created many projects using Flutter for both Android and iOS.</p>
+      <p>I also enthusiastic about the mechanical keyboard, and audiophile. I have a dream to adopt a cat or dog some day.</p>
+          </article>
+        <ul class="icon-list">
+              <li>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                Surabaya, Indonesia
+              </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <a href="mailto:andrewanggada@gmail.com">andrewanggada@gmail.com</a>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <a href="tel:089669961997">089669961997</a>
+            </li>
+          </br>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+              <a href="https://angdrew.github.io/">angdrew.github.io</a>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                  <a href="https://www.linkedin.com/in/angdrew/">angdrew</a>
+                <span class="network">(LinkedIn)</span>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  <a href="https://github.com/AngDrew/">angdrew</a>
+                <span class="network">(Github)</span>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-gitlab"><path d="M22.65 14.39L12 22.13 1.35 14.39a.84.84 0 0 1-.3-.94l1.22-3.78 2.44-7.51A.42.42 0 0 1 4.82 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.49h8.1l2.44-7.51A.42.42 0 0 1 18.6 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.51L23 13.45a.84.84 0 0 1-.35.94z"></path></svg>
+                  <a href="https://gitlab.com/AngDrew/">angdrew</a>
+                <span class="network">(Gitlab)</span>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                  <a href="https://stackoverflow.com/users/12716366/angdrew/">angdrew</a>
+                <span class="network">(StackOverflow)</span>
+            </li>
+            <li>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                  <a href="https://instagram.com/ang_drew">ang_drew</a>
+                <span class="network">(Instagram)</span>
+            </li>
+        </ul>
+      </header>
+
+      <section id="languages">
+        <h3>Languages</h3>
+        <div class="grid-list">
+            <div>
+                <h4>Indonesia</h4>
+              Native Speaker
+            </div>
+            <div>
+                <h4>English</h4>
+              Average
+            </div>
+        </div>
+      </section>
+      <section id="skills">
+        <h3>Skills</h3>
+        <div class="grid-list">
+            <div>
+                <h4>Advanced Level Skills</h4>
+                <ul class="tag-list">
+                    <li>Dart Language</li>
+                    <li>Flutter Framework</li>
+                    <li>Android Development using Flutter</li>
+                    <li>iOS Development using Flutter</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Intermediate Level Skills</h4>
+                <ul class="tag-list">
+                    <li>Git</li>
+                    <li>GitKraken</li>
+                    <li>Object-Oriented Programming</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Beginer Level Skills</h4>
+                <ul class="tag-list">
+                    <li>Kotlin</li>
+                    <li>Swift</li>
+                    <li>Java</li>
+                    <li>PHP</li>
+                    <li>Laravel</li>
+                    <li>C</li>
+                    <li>C++</li>
+                    <li>Python</li>
+                    <li>SQL</li>
+                    <li>Networking</li>
+                    <li>Dev-Ops</li>
+                </ul>
+            </div>
+        </div>
+      </section>
+      <section id="certificates">
+        <h3>Certificates</h3>
+        <div class="stack">
+            <article>
+              <header>
+                <h4><a href="https://www.dicoding.com/certificates/53XEEOLG9XRN">Belajar Prinsip Pemrograman SOLID</a></h4>
+                <div class="meta">
+                    <div>
+                      Issued by <strong>Dicoding Indonesia</strong>
+                    </div>
+                </div>
+              </header>
+            </article>
+        </div>
+      </section>
+      <section id="work">
+        <h3>Work</h3>
+        <div class="stack">
+            <article>
+              <header>
+                <h4>Mobile Application Developer</h4>
+                <div class="meta">
+                  <div>
+                    <strong><a href="https://www.linkedin.com/company/1190648">Meratus Group</a></strong>
+                  </div>
+                  <div>
+                    <time datetime="2021-10-31">Oct 2021</time> –
+                    Present
+                  </div>
+                </div>
+              </header>
+                <p>Working as a Full-Timer Mobile Developer. Achievements:</p>
+    <ul>
+    <li>Maintaining old MIF App that created using Flutter by vendor.</li>
+    <li>Remaking MIF App using flutter, with a better performance, better maintainability, better user experiences.</li>
+    <li>Implemented Dev-Ops on the MIF App Project, ensuring maintainability of the app.</li>
+    <li>redesign the remake MIF App architecture to ensure maintainability of the app</li>
+    <li>Implementing DevOps and GitFlow to the MIF App project.</li>
+    <li>Discussing with teams to enrich knowledge</li>
+    </ul>
+            </article>
+            <article>
+              <header>
+                <h4>Mobile Application Developer</h4>
+                <div class="meta">
+                  <div>
+                    <strong><a href="https://www.linkedin.com/company/72312705">PT Digital Entropy Venture</a></strong>
+                  </div>
+                  <div>
+                    <time datetime="2021-04-30">Apr 2021</time> –
+                    <time datetime="2021-10-31">Oct 2021</time>
+                  </div>
+                </div>
+              </header>
+                <p>Working as Part-Timer Mobile App Developer. Achievements:</p>
+    <ul>
+    <li>Designed, Created, Maintaining TiaraMas App. This app is created using Flutter, integrated with Thermal Printer, used for creating booking of TiaraMas Bus.</li>
+    <li>Designed, Created, Maintaining Legal Space App. This app is created using Flutter, integrated with Payment Gateway Mitrans, and the app has 2 users: Customer and Partner, used for creating appointment between Customer and Partner.</li>
+    </ul>
+            </article>
+            <article>
+              <header>
+                <h4>Mobile Application Developer</h4>
+                <div class="meta">
+                  <div>
+                    <strong><a href="https://www.linkedin.com/company/447217">YCP Solidiance</a></strong>
+                  </div>
+                  <div>
+                    <time datetime="2020-08-31">Aug 2020</time> –
+                    <time datetime="2020-12-31">Dec 2020</time>
+                  </div>
+                </div>
+              </header>
+                <p>Working as apprentice Mobile Software Engineer. Achievements:</p>
+    <ul>
+    <li>Working together with my senior, designing JMW Fisher App using Flutter.</li>
+    <li>Integrated custom data to Google Maps.</li>
+    </ul>
+            </article>
+            <article>
+              <header>
+                <h4>Mobile Application Developer</h4>
+                <div class="meta">
+                  <div>
+                    <strong><a href="https://www.linkedin.com/company/13221831">Lanius Innovation Labs.</a></strong>
+                  </div>
+                  <div>
+                    <time datetime="2020-06-30">Jun 2020</time> –
+                    <time datetime="2020-07-31">Jul 2020</time>
+                  </div>
+                </div>
+              </header>
+                <p>Working as internship as Mobile Developer using Flutter. Achievements:</p>
+    <ul>
+    <li>Created UI of online learning platform.</li>
+    </ul>
+            </article>
+        </div>
+      </section>
+      <section id="volunteer">
+        <h3>Volunteer</h3>
+        <div class="stack">
+            <article>
+              <header>
+                <h4>Speaker</h4>
+                <div class="meta">
+                  <strong>Self Initiative</strong>
+                  <div>
+                    <time datetime="2020-07-31">Jul 2020</time> –
+                    <time datetime="2020-07-31">Jul 2020</time>
+                  </div>
+                </div>
+              </header>
+                <p>my small free course for my circle, talking about fundamentals, basics, tips and tricks, knowledge base of Flutter development
+    but the course is cancelled due to small participants and busy timeline</p>
+            </article>
+            <article>
+              <header>
+                <h4>Speaker</h4>
+                <div class="meta">
+                  <strong><a href="https://www.linkedin.com/company/14592036">Developer Student Clubs (DSC - DTU)</a></strong>
+                  <div>
+                    <time datetime="2019-09-30">Sep 2019</time> –
+                    <time datetime="2019-10-31">Oct 2019</time>
+                  </div>
+                </div>
+              </header>
+                <p>Speaking about Flutter and doing small live code for a few times</p>
+            </article>
+        </div>
+      </section>
+      <section id="education">
+        <h3>Education</h3>
+        <div class="stack">
+            <article>
+              <header>
+                <h4><a href="https://www.pens.ac.id/tentang-pens/">Politeknik Elektronik Negeri Surabaya</a></h4>
+                <div class="meta">
+                    <strong>Information Technology</strong>
+                  <div>
+                    <time datetime="2018-01-31">Jan 2018</time> –
+                    <time datetime="2021-08-31">Aug 2021</time>
+                  </div>
+                </div>
+              </header>
+                <p>Associate's Degree</p>
+            </article>
+        </div>
+      </section>
+      <section id="awards">
+        <h3>Awards</h3>
+        <div class="stack">
+            <article>
+              <header>
+                <h4>Finalist PIC 2020</h4>
+                <div class="meta">
+                    <div>
+                      Awarded by <strong>Politeknik Elektronika Negeri Surabaya</strong>
+                    </div>
+                    <time datetime="2020-06-01">Jun 2020</time>
+                </div>
+              </header>
+                
+            </article>
+            <article>
+              <header>
+                <h4>1st Appreciation Award at EEPIS Software Expo 2020</h4>
+                <div class="meta">
+                    <div>
+                      Awarded by <strong>Politeknik Elektronika Negeri Surabaya</strong>
+                    </div>
+                    <time datetime="2020-01-01">Jan 2020</time>
+                </div>
+              </header>
+                <p>making mobile app: Vendora - event market</p>
+            </article>
+            <article>
+              <header>
+                <h4>Finalist of KMIPN 2018 (Business Informatics)</h4>
+                <div class="meta">
+                    <div>
+                      Awarded by <strong>Ristekdikti</strong>
+                    </div>
+                    <time datetime="2018-11-01">Nov 2018</time>
+                </div>
+              </header>
+                <p>making a business plan with IT themed</p>
+            </article>
+        </div>
+      </section>
+      <section id="projects">
+        <h3>Projects</h3>
+        <div class="stack">
+            <article>
+              <header>
+                <h4>MIF</h4>
+                <div class="meta">
+                  <div>
+                      <strong>Senior Mobile Developer</strong>
+                      at <strong>Digital Entropy Venture</strong>
+                  </div>
+                  <div>
+                    <time datetime="2021-10-31">Oct 2021</time> –
+                    Present
+                  </div>
+                </div>
+              </header>
+                <p>This app is used for tracking and making request about logistic online at Meratus.</p>
+    <p>My role in this project is as a full-timer mobile app developer, my job is to maintain the existing app while building the remake version of the app. Why remake? that's a lot to explain. But tl;dr I've spotted so many issue about the project, so I asked the chairman if i can remake this with a better fundamental from architecture, library, low-level things. And they're agreed, so I made the remake while maintaining the old one.</p>
+    <p>Built using Flutter, using rxdart and bloc, local notification.</p>
+                <ul>
+                    <li><p>Flutter</p></li>
+                    <li><p>Multi Platform</p></li>
+                    <li><p>Provider</p></li>
+                    <li><p>MVVM Architecture</p></li>
+                    <li><p>Github Action</p></li>
+                    <li><p>DevOps</p></li>
+                    <li><p>Flavor</p></li>
+                </ul>
+            </article>
+            <article>
+              <header>
+                <h4>Legal Space ID</h4>
+                <div class="meta">
+                  <div>
+                      <strong>Mobile Developer</strong>
+                      at <strong>Meratus Group</strong>
+                  </div>
+                  <div>
+                    <time datetime="2021-07-31">Jul 2021</time> –
+                    Present
+                  </div>
+                </div>
+              </header>
+                <p>This app is used for making appointments with the professionals in in the field of law. There are 2 user roles, Partner and Customer. Partner can moderate their consultation with the app, while Customer can make an appointment to the partners.
+    My role in this project is as a solo part-timer mobile developer.</p>
+    <p>Built using Flutter, using MVVM architecture, Provider state management, Midtrans payment gateway, Clean code principles, CI CD with GitHub actions, and flavor.</p>
+                <ul>
+                    <li><p>Flutter</p></li>
+                    <li><p>Multi Platform</p></li>
+                    <li><p>Provider</p></li>
+                    <li><p>MVVM Architecture</p></li>
+                    <li><p>Github Action</p></li>
+                    <li><p>DevOps</p></li>
+                    <li><p>Flavor</p></li>
+                </ul>
+            </article>
+            <article>
+              <header>
+                <h4>TiaraMas</h4>
+                <div class="meta">
+                  <div>
+                      <strong>Mobile Developer</strong>
+                      at <strong>Digital Entropy Venture</strong>
+                  </div>
+                  <div>
+                    <time datetime="2021-04-30">Apr 2021</time> –
+                    <time datetime="2021-10-31">Oct 2021</time>
+                  </div>
+                </div>
+              </header>
+                <p>This app is used to book an online tickets of TiaraMas.
+    My role in this project is as a solo part-timer mobile developer.</p>
+    <p>built with Flutter, using clean code principles, MVVM architecture, Provider state management, CI CD with GitHub actions.</p>
+                <ul>
+                    <li><p>Flutter</p></li>
+                    <li><p>Multi Platform</p></li>
+                    <li><p>Provider</p></li>
+                    <li><p>MVVM Architecture</p></li>
+                    <li><p>Github Action</p></li>
+                    <li><p>DevOps</p></li>
+                </ul>
+            </article>
+            <article>
+              <header>
+                <h4>JMW Fisher App</h4>
+                <div class="meta">
+                  <div>
+                      <strong>Mobile Developer Intern</strong>
+                      at <strong>YCP Solidiance</strong>
+                  </div>
+                  <div>
+                    <time datetime="2020-08-31">Aug 2020</time> –
+                    <time datetime="2020-12-31">Dec 2020</time>
+                  </div>
+                </div>
+              </header>
+                <p>an cross platform mobile application for fisher - as apprenticeship at YCP Solidiance
+    created with Flutter</p>
+    <p>the app is used for fisher to see fishing spot, available facilities, useful maps.</p>
+    <p>The features are:</p>
+    <ul>
+    <li>log catch</li>
+    <li>showing all available facilities</li>
+    <li>showing fishing spots</li>
+    <li>maps</li>
+    <li>timer</li>
+    <li>weather</li>
+    <li>fish information</li>
+    <li>available species on certain spot</li>
+    <li>etc.</li>
+    </ul>
+    <p>the app is integrated with Java backend</p>
+                <ul>
+                    <li><p>Flutter</p></li>
+                    <li><p>Multi Platform</p></li>
+                    <li><p>BLOC</p></li>
+                    <li><p>Bloc Pattern</p></li>
+                    <li><p>Nautical Map API</p></li>
+                    <li><p>Weather API</p></li>
+                    <li><p>Google Map API</p></li>
+                    <li><p>Webview</p></li>
+                    <li><p>Platform Channel</p></li>
+                </ul>
+            </article>
+            <article>
+              <header>
+                <h4>Sistem Informasi Ketidakpatuhan Masyarakat (SIKM)</h4>
+                <div class="meta">
+                  <div>
+                      <strong>Freelance Mobile Developer</strong>
+                  </div>
+                  <div>
+                    <time datetime="2020-09-30">Sep 2020</time> –
+                    <time datetime="2020-12-31">Dec 2020</time>
+                  </div>
+                </div>
+              </header>
+                <p>I was lucky to have this opportunity to make an app for a guy from Kominfo.</p>
+    <p>a cross-platform mobile application for SatpolPP - as Freelancer Mobile Engineering
+    created with Flutter</p>
+    <p>the app is used for Satpol PP to record people who break the covid protocols.</p>
+    <p>The features are:</p>
+    <ul>
+    <li>record people</li>
+    <li>officer attendance</li>
+    <li>statistics of the distribution cases</li>
+    <li>profile</li>
+    </ul>
+    <p>the app is integrated with Laravel Backend</p>
+    <p>even this project looks simple and considered a small project tho, but there is a lot of tasks to do on it. I treat it like my best trophy and I want other people to love to use it. I used all my skills to work on that project and it was so satisfying!
+    (I nominated this project with &quot;My Most Satisfying Project on 2020&quot;)
+    but it takes a lot of time waiting for a client to respond, I'm struggling</p>
+    <p>a few things that I'm interested in that project:</p>
+    <ul>
+    <li>Code Generation</li>
+    <li>Software Testing</li>
+    <li>Animation</li>
+    <li>Responsive</li>
+    <li>90% looks like the prototype</li>
+    <li>Performance First</li>
+    <li>Clean Code (I'm still in practice but it's very readable!)</li>
+    <li>Error Handling</li>
+    <li>it just EVERYTHING! 😍</li>
+    </ul>
+    <p>things that I haven't added:</p>
+    <ul>
+    <li>Crashlytics (the project is finished already before i could request for their Firebase account)</li>
+    </ul>
+                <ul>
+                    <li><p>Flutter</p></li>
+                    <li><p>Multi Platform</p></li>
+                    <li><p>Provider</p></li>
+                </ul>
+            </article>
+            <article>
+              <header>
+                <h4>Enterprise University Mobile</h4>
+                <div class="meta">
+                  <div>
+                      <strong>Mobile Developer Intern</strong>
+                      at <strong>Lannius Innovation Labs</strong>
+                  </div>
+                  <div>
+                    <time datetime="2020-06-30">Jun 2020</time> –
+                    <time datetime="2020-07-31">Jul 2020</time>
+                  </div>
+                </div>
+              </header>
+                <p>E-Learning platform - as internship at Lannius Innovation Labs
+    created with Flutter</p>
+    <p>the app used for learning platform which has a lot of features, it's privately made for some university.</p>
+    <p>The features are:</p>
+    <ul>
+    <li>take course</li>
+    <li>add reminder</li>
+    <li>forum group discussion</li>
+    <li>video streaming</li>
+    <li>notes</li>
+    <li>quiz</li>
+    <li>profile</li>
+    <li>has 3 type UI (Mentee, Manager, Mentor)</li>
+    <li>etc. (imagine something like quipper or ruang guru they're pretty similar)</li>
+    </ul>
+    <p>the app isn't integrated yet because the time is too short</p>
+                <ul>
+                    <li><p>Flutter</p></li>
+                    <li><p>Multi Platform</p></li>
+                </ul>
+            </article>
+            <article>
+              <header>
+                <h4>Lapis Surabaya</h4>
+                <div class="meta">
+                  <div>
+                      <strong>Freelance Mobile Developer</strong>
+                  </div>
+                  <div>
+                    <time datetime="2020-04-30">Apr 2020</time> –
+                    <time datetime="2020-04-30">Apr 2020</time>
+                  </div>
+                </div>
+              </header>
+                <p>E-commerce - as maintainer and developer to fix the previous bug and adding new features.
+    created with Flutter</p>
+    <p>this app is created specially for those customers who will buy in massive amount with high minimum transaction. They should be verified before be able to purchase something, and the app it self simply just record the order of the customers and tell the web admin to response the order and finish</p>
+    <p>The features are:</p>
+    <ul>
+    <li>dashboard (showing user point, available promotion code, user role)</li>
+    <li>product screen (user can place an order and see the product list)</li>
+    <li>order screen (user can enter the detailed information for the order)</li>
+    <li>order list (where user can find the ordered items and see the order status)</li>
+    <li>profile (information about the user)</li>
+    <li>edit profile (where user can change their information)</li>
+    <li>verification screen (user can request for higher role)</li>
+    </ul>
+    <p>integrated with backend (using laravel)</p>
+                <ul>
+                    <li><p>Flutter</p></li>
+                    <li><p>Multi Platform</p></li>
+                </ul>
+            </article>
+            <article>
+              <header>
+                <h4>Tanam Kota</h4>
+                <div class="meta">
+                  <div>
+                      <strong>IT Team Member</strong>
+                      at <strong>Tanam Kota Team</strong>
+                  </div>
+                  <div>
+                    <time datetime="2020-03-31">Mar 2020</time> –
+                    <time datetime="2020-03-31">Mar 2020</time>
+                  </div>
+                </div>
+              </header>
+                <p>Application - as developer, create from scratch
+    created with Flutter</p>
+    <p>App for start-up, using IoT to monitoring the plants on the created hydroponic towers and also controls it. The tower it self is made by the start-up side, and the app is to assist the tower and it's functionality.</p>
+    <p>the features are:</p>
+    <ul>
+    <li>monitoring hydroponic status (humidity, water volume, growth, acid level)</li>
+    <li>control sensors (water pump switch, growth light switch)</li>
+    <li>supply customer</li>
+    <li>request supply</li>
+    <li>buy the hydroponic tower</li>
+    <li>has 2 type of UI (customer, farmer)</li>
+    </ul>
+    <p>unfinished
+    integrated with firebase</p>
+                <ul>
+                    <li><p>Flutter</p></li>
+                    <li><p>Multi Platform</p></li>
+                </ul>
+            </article>
+            <article>
+              <header>
+                <h4>E-Vote</h4>
+                <div class="meta">
+                  <div>
+                      <strong>E-Code Chairman</strong>
+                      at <strong>Himpunan Mahasiswa IT PENS</strong>
+                  </div>
+                  <div>
+                    <time datetime="2020-02-28">Feb 2020</time> –
+                    <time datetime="2020-02-28">Feb 2020</time>
+                  </div>
+                </div>
+              </header>
+                <p>as developer also a chairman, remake project from scratch from the Native version to Flutter
+    created with Flutter</p>
+    <p>the app is used to succession of new chairman on the organization, using token that uniquely generated from the web app and use them in the mobile app to vote the candidates</p>
+    <p>the features are:</p>
+    <ul>
+    <li>login</li>
+    <li>view candidates</li>
+    <li>choose candidates</li>
+    <li>timeout when token expires</li>
+    </ul>
+    <p>integrated with backend (using laravel)</p>
+                <ul>
+                    <li><p>Flutter</p></li>
+                    <li><p>Multi Platform</p></li>
+                </ul>
+            </article>
+        </div>
+      </section>
+      <section id="interests">
+        <h3>Interests</h3>
+        <div class="grid-list">
+            <div>
+                <h4>Game</h4>
+            </div>
+            <div>
+                <h4>Music</h4>
+            </div>
+            <div>
+                <h4>Psychology</h4>
+            </div>
+            <div>
+                <h4>Philosophy</h4>
+            </div>
+            <div>
+                <h4>Crypto Currency</h4>
+            </div>
+            <div>
+                <h4>Technology</h4>
+            </div>
+            <div>
+                <h4>Open Source</h4>
+            </div>
+        </div>
+      </section>
+  </body>
+</html>
